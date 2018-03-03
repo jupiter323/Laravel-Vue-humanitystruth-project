@@ -16,7 +16,7 @@ class CreateShoppingCartsTable extends Migration
         Schema::create('shopping_carts', function (Blueprint $table) {
             $table->increments('uid');
         	$table->integer('account_id')->unique();
-        	$table->json('basket');
+        	$table->text('basket');
         });
     }
 

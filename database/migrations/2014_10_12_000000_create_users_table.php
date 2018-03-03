@@ -23,7 +23,7 @@ class CreateUsersTable extends Migration {
             $table->string('intel')->nullable(); //background info
             $table->boolean('default_text_notification')->default(0);
             $table->boolean('default_email_notification')->default(1);
-            //$table->enum('type', [ 'closed', 'inactive','phone_verified','email_verified','both_verified','moderator','admin','super_admin' ] );
+            $table->enum('role', [ 'closed', 'inactive','phone_verified','email_verified','both_verified','moderator','admin','super_admin' ] );
             $table->timestamps();
             $table->rememberToken(); //rememberMe
         });

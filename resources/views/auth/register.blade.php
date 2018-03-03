@@ -12,7 +12,7 @@
                 <p><input id="alias" placeholder=" Alias (public, optional)" type="alias" class="form-control{{ $errors->has('alias') ? ' is-invalid' : '' }}" name="alias" value="{{ old('alias') }}"></p>
                 <p><input id="password" placeholder=" Password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required></p>
                 <p><input id="password-confirm" placeholder=" Confirm Password" class="form-control" type="password" name="password_confirmation" required></p>
-                {{--  <p><div class="g-recaptcha" data-sitekey="{{env('RECAPTCHA_SITE_KEY')}}"></div></p>  --}}
+                <p><div class="g-recaptcha" data-sitekey="{{env('RECAPTCHA_SITE_KEY')}}"></div></p>
             </div>
             <div class="w3-container">
                 <button class="w3-button w3-black w3-right" type="submit">
