@@ -7,6 +7,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use App\Rules\Recaptcha;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\Welcome;
 
 
 class RegisterController extends Controller
@@ -53,8 +55,8 @@ class RegisterController extends Controller
             'email' => 'required|string|email|max:255|unique:users',
             'phone' => 'nullable|integer|min:10|unique:users',
             'alias' => 'nullable|string|max:32|unique:users',
-            'password' => 'required|string|min:10|confirmed',
-            'g-recaptcha-response' => ['required', new Recaptcha],
+            'password' => 'required|string|min:6|confirmed'
+            // 'g-recaptcha-response' => ['required', new Recaptcha],
         ]);
     }
 

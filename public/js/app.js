@@ -1736,6 +1736,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 var prices = [0, 1000, 500, 250, 100, 50, 25, 10];
 var pay_types = ["once", "Monthly"];
@@ -36549,53 +36558,102 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "w3-container" }, [
       _c(
-        "p",
+        "div",
         {
-          attrs: {
-            title:
-              "Bitcoin is a decentralized and anonymous digital currency. Bitcoins are not subject to central regulations and are still gaining value. To learn more about Bitcoin, visit https://bitcoin.org"
-          }
+          staticClass: "w3-col s12 m8 l9 w3-padding w3-panel",
+          staticStyle: { "min-height": "160px" }
         },
-        [_c("b", [_vm._v("Bitcoin")])]
+        [
+          _c(
+            "p",
+            {
+              attrs: {
+                title:
+                  "Bitcoin is a decentralized and anonymous digital currency. Bitcoins are not subject to central regulations and are still gaining value. To learn more about Bitcoin, visit https://bitcoin.org"
+              }
+            },
+            [_c("b", [_vm._v("Bitcoin")])]
+          ),
+          _vm._v(" "),
+          _c(
+            "p",
+            { staticClass: "color-red", staticStyle: { "overflow-y": "auto" } },
+            [_vm._v("1HB5XMLmzFVj8ALj6mfBsbifRoD4miY36v")]
+          )
+        ]
       ),
       _vm._v(" "),
-      _c(
-        "p",
-        { staticClass: "color-red", staticStyle: { "overflow-y": "auto" } },
-        [_vm._v("1HB5XMLmzFVj8ALj6mfBsbifRoD4miY36v")]
-      )
+      _c("div", { staticClass: "w3-col s12 m4 l3 w3-padding w3-panel" }, [
+        _c("img", {
+          attrs: {
+            id: "barcode_bitcoin",
+            src:
+              "https://api.qrserver.com/v1/create-qr-code/?data=1HB5XMLmzFVj8ALj6mfBsbifRoD4miY36v&size=150x150",
+            alt: "",
+            title: "Bitcoin",
+            width: "150",
+            height: "150"
+          }
+        })
+      ])
     ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "w3-col s12 m12 l12 w3-padding" }, [
+    return _c("div", { staticClass: "w3-container" }, [
       _c("div", { staticClass: "w3-panel w3-section w3-pale-green" }, [
         _c("p", { staticClass: "section-title" }, [_vm._v("Monero")])
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "w3-panel" }, [
-        _c("p", [
-          _c("b", [_vm._v("Moreno")]),
-          _vm._v(
-            " is an open-source cryptocurrency that focuses on privacy, decentralisation and scalability. Unlike many cryptocurrencies that are derivatives of Bitcoin, Monero is based on the CryptoNote protocol and possesses significant algorithmic differences relating to blockchain obfuscation."
-          )
-        ]),
-        _vm._v(" "),
-        _c("p", [
-          _c("b", [_vm._v("Monero users may choose to donate to us at:")])
-        ]),
-        _vm._v(" "),
+      _c("div", [
         _c(
-          "p",
-          { staticClass: "color-red", staticStyle: { "overflow-y": "auto" } },
+          "div",
+          {
+            staticClass: "w3-col s12 m8 l9 w3-padding w3-panel",
+            staticStyle: { "min-height": "160px" }
+          },
           [
-            _vm._v(
-              "47BnvD18P456f4KJUBKPS3Rqa97LrTaeqJ5NFYmjQM6nVoz6TBv4rJ24GZk883BNo22fAKbr8BSuTjhQC6K7DsSJFa8SHDs"
+            _c("p", [
+              _c("b", [_vm._v("Moreno")]),
+              _vm._v(
+                " is an open-source cryptocurrency that focuses on privacy, decentralisation and scalability. Unlike many cryptocurrencies that are derivatives of Bitcoin, Monero is based on the CryptoNote protocol and possesses significant algorithmic differences relating to blockchain obfuscation."
+              )
+            ]),
+            _vm._v(" "),
+            _c("p", [
+              _c("b", [_vm._v("Monero users may choose to donate to us at:")])
+            ]),
+            _vm._v(" "),
+            _c(
+              "p",
+              {
+                staticClass: "color-red",
+                staticStyle: { "overflow-y": "auto" }
+              },
+              [
+                _vm._v(
+                  "47BnvD18P456f4KJUBKPS3Rqa97LrTaeqJ5NFYmjQM6nVoz6TBv4rJ24GZk883BNo22fAKbr8BSuTjhQC6K7DsSJFa8SHDs"
+                )
+              ]
             )
           ]
-        )
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "w3-col s12 m4 l3 w3-padding w3-panel" }, [
+          _c("img", {
+            attrs: {
+              id: "barcode_monero",
+              src:
+                "https://api.qrserver.com/v1/create-qr-code/?data=47BnvD18P456f4KJUBKPS3Rqa97LrTaeqJ5NFYmjQM6nVoz6TBv4rJ24GZk883BNo22fAKbr8BSuTjhQC6K7DsSJFa8SHDs&size=150x150",
+              alt: "",
+              title: "Bitcoin",
+              width: "150",
+              height: "150"
+            }
+          })
+        ])
       ])
     ])
   }

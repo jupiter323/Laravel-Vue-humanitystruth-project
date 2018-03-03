@@ -71,20 +71,29 @@
                 </div>
             </div>
             <div class="w3-container">
-                <p title="Bitcoin is a decentralized and anonymous digital currency. Bitcoins are not subject to central regulations and are still gaining value. To learn more about Bitcoin, visit https://bitcoin.org"><b>Bitcoin</b></p>
-                <p class="color-red" style="overflow-y: auto;">1HB5XMLmzFVj8ALj6mfBsbifRoD4miY36v</p>
+                <div class="w3-col s12 m8 l9 w3-padding w3-panel" style="min-height: 160px;">
+                    <p title="Bitcoin is a decentralized and anonymous digital currency. Bitcoins are not subject to central regulations and are still gaining value. To learn more about Bitcoin, visit https://bitcoin.org"><b>Bitcoin</b></p>
+                    <p class="color-red" style="overflow-y: auto;">1HB5XMLmzFVj8ALj6mfBsbifRoD4miY36v</p>
+                </div>
+                <div class="w3-col s12 m4 l3 w3-padding w3-panel">
+                    <img id='barcode_bitcoin' src="https://api.qrserver.com/v1/create-qr-code/?data=1HB5XMLmzFVj8ALj6mfBsbifRoD4miY36v&amp;size=150x150" alt="" title="Bitcoin" width="150" height="150" />
+                </div>
+                
             </div>
-                    <div class="w3-col s12 m12 l12 w3-padding">
-                            <div class="w3-panel w3-section w3-pale-green">
-                                    <p class="section-title">Monero</p>
-                            </div>
-                            <div class="w3-panel">
-                                <p><b>Moreno</b> is an open-source cryptocurrency that focuses on privacy, decentralisation and scalability. Unlike many cryptocurrencies that are derivatives of Bitcoin, Monero is based on the CryptoNote protocol and possesses significant algorithmic differences relating to blockchain obfuscation.</p>
-                                <p><b>Monero users may choose to donate to us at:</b></p>
-                                <p class="color-red" style="overflow-y: auto;">47BnvD18P456f4KJUBKPS3Rqa97LrTaeqJ5NFYmjQM6nVoz6TBv4rJ24GZk883BNo22fAKbr8BSuTjhQC6K7DsSJFa8SHDs</p>
-                            </div>
-                        </div>
-                        
+            <div class="w3-container">
+                <div class="w3-panel w3-section w3-pale-green">
+                        <p class="section-title">Monero</p>
+                </div>
+                <div>
+                    <div class="w3-col s12 m8 l9 w3-padding w3-panel"  style="min-height: 160px;">
+                        <p><b>Moreno</b> is an open-source cryptocurrency that focuses on privacy, decentralisation and scalability. Unlike many cryptocurrencies that are derivatives of Bitcoin, Monero is based on the CryptoNote protocol and possesses significant algorithmic differences relating to blockchain obfuscation.</p>
+                        <p><b>Monero users may choose to donate to us at:</b></p>
+                        <p class="color-red" style="overflow-y: auto;">47BnvD18P456f4KJUBKPS3Rqa97LrTaeqJ5NFYmjQM6nVoz6TBv4rJ24GZk883BNo22fAKbr8BSuTjhQC6K7DsSJFa8SHDs</p>
+                    </div>   
+                    <div class="w3-col s12 m4 l3 w3-padding w3-panel">
+                        <img id='barcode_monero' src="https://api.qrserver.com/v1/create-qr-code/?data=47BnvD18P456f4KJUBKPS3Rqa97LrTaeqJ5NFYmjQM6nVoz6TBv4rJ24GZk883BNo22fAKbr8BSuTjhQC6K7DsSJFa8SHDs&amp;size=150x150" alt="" title="Bitcoin" width="150" height="150" />
+                    </div> 
+                </div>
             </div>
         </div>
     </div>

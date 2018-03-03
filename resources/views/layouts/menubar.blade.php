@@ -42,7 +42,8 @@
         @endif
         <div class="w3-button w3-bar-item w3-right w3-mobile"><a href="settings">{{ Auth::user()->email }}</a></div>
         <div class="w3-button w3-bar-item w3-right w3-mobile">
-            <a onclick="getObj('logout-form').submit();">
+            <a href="{{ route('logout') }}" onclick="event.preventDefault();
+            document.getElementById('logout-form').submit();">
                 LOGOUT
             </a>
         </div>
