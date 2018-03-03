@@ -1,0 +1,16 @@
+{
+    "name": "SecureDrop",
+    "alias": "securedrop",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\SecureDrop\\Providers\\SecureDropServiceProvider"
+    ],
+    "aliases": {},
+    "files": [
+        "start.php"
+    ],
+    "requires": []
+}
