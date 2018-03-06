@@ -74,3 +74,6 @@ Route::get('ethics-policy', function () {
 Route::get('join', function () {
     return view('join');
 });
+
+
+Route::get('/verifyemail/{token}', 'Auth\RegisterController@verify');

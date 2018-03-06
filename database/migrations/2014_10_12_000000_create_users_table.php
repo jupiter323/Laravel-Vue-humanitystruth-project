@@ -19,6 +19,7 @@ class CreateUsersTable extends Migration {
             $table->string('alias')->unique()->nullable();
             $table->string('password');
             //$table->string('hash')->unique(); //mutating access token
+            $table->string('email_token')->nullable(); //email verification token
             $table->string('avatar')->nullable();
             $table->string('intel')->nullable(); //background info
             $table->boolean('default_text_notification')->default(0);

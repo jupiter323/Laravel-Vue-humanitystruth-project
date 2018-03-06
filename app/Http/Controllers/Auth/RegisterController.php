@@ -7,8 +7,9 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use App\Rules\Recaptcha;
-use Illuminate\Support\Facades\Mail;
-use App\Mail\Welcome;
+use Illuminate\Auth\Events\Registered;
+use Illuminate\Http\Request;
+use App\Jobs\SendVerificationEmail;
 
 
 class RegisterController extends Controller
@@ -55,8 +56,8 @@ class RegisterController extends Controller
             'email' => 'required|string|email|max:255|unique:users',
             'phone' => 'nullable|integer|min:10|unique:users',
             'alias' => 'nullable|string|max:32|unique:users',
-            'password' => 'required|string|min:6|confirmed',
-            'g-recaptcha-response' => ['required', new Recaptcha],
+            'password' => 'required|string|min:6|confirmed'
+            // 'g-recaptcha-response' => ['required', new Recaptcha],
         ]);
     }
 
@@ -69,15 +70,43 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         session()->flash('warning', "You're almost done! Please check your email for a verification link..");
-        $user = User::create([
+        return User::create([
             'email' => $data['email'],
             'phone' => $data['phone'],
             'alias' => $data['alias'],
             'password' => bcrypt($data['password']),
+            'email_token' => base64_encode($data['email']),
+            'role' => 'inactive',
+
         ]);
         
-        Mail::to($data['email'])->send(new Welcome($user));
-        
-        return $user;
+    }
+
+    /**
+    * Handle a registration request for the application.
+    *
+    * @param \Illuminate\Http\Request $request
+    * @return \Illuminate\Http\Response
+    */
+    public function register(Request $request)
+    {
+        $this->validator($request->all())->validate();
+        event(new Registered($user = $this->create($request->all())));
+        dispatch(new SendVerificationEmail($user));
+        return view('emails.verification_sent');
+    }
+    /**
+    * Handle a registration request for the application.
+    *
+    * @param $token
+    * @return \Illuminate\Http\Response
+    */
+    public function verify($token)
+    {
+        $user = User::where('email_token',$token)->first();
+        $user->role = 'email_verified';
+        if($user->save()){
+            return view('emails.verification_confirm',['user'=>$user]);
+        }
     }
 }
