@@ -27,7 +27,7 @@
         </div>
         
         <!-- Donation payment -->
-        <div id="donate">
+        <div id="vue_app">
             @csrf
             <donate-component></donate-component>
         </div>

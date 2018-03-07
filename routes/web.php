@@ -31,7 +31,13 @@ Route::get('files/new', 'FileController@create');
 Route::get('dashboard', 'DashboardController@index');
 
 /* Backend */
-Route::get('admin', 'AdminController@index');
+Route::group(['prefix' => 'admins'], function () {
+    Route::get('/', 'AdminController@index')->name('admins');
+    Route::get('affiliates', 'AdminController@affiliatesView')->name('admin.affiliatesView');
+    Route::post('affiliates', 'AdminController@affiliatesSave')->name('admin.affiliatesSave');
+    Route::get('affiliates/remove/{id}', 'AdminController@affiliatesRemove');
+});
+
 
 /* Dev-Team */
 Route::get('dev-team', 'DevelopmentController@index');

@@ -17,5 +17,5 @@ window.Vue = require('vue');
 Vue.component('donate-component', require('./components/DonateComponent.vue'));
 
 const app = new Vue({
-    el: '#donate'
+    el: '#vue_app'
 });

@@ -47566,7 +47566,7 @@ window.Vue = __webpack_require__("./node_modules/vue/dist/vue.common.js");
 Vue.component('donate-component', __webpack_require__("./resources/assets/js/components/DonateComponent.vue"));
 
 var app = new Vue({
-  el: '#donate'
+  el: '#vue_app'
 });
 
 /***/ }),
