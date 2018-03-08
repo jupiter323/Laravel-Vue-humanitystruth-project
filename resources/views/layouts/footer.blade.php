@@ -1,4 +1,4 @@
-<div id="footer" class="w3-black w3-center">
+<div class="w3-black w3-center">
     <div class="w3-container">
         <div class="w3-container w3-quarter">
             <a href="#top" title="Back to Top">
