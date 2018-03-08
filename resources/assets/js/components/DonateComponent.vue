@@ -54,13 +54,30 @@
             <div class="w3-container">
                 <div class="w3-hide">
                     <form method="POST" action="https://www.paypal.com/cgi-bin/webscr" role="form" id="paypal_form">
-                        <div class="form-group">
-                            <input type="hidden" name="cmd" value="_donations">
-                            <input type="hidden" name="business" value="admin@humanitystruth.com">
-                            <input type="hidden" name="amount" v-model="price" class="pure-number">
-                            <input type="hidden" name="return" value="https://humanitystruth.com/donate">
-                            <input type="hidden" name="cancel_return" value="https://humanitystruth.com/donate">
+                        <div v-if="!monthlyMethod">
+                            <div class="form-group">
+                                <input type="hidden" name="cmd" value="_donations">
+                                <input type="hidden" name="business" value="admin@humanitystruth.com">
+                                <input type="hidden" name="amount" v-model="price" class="pure-number">
+                                <input type="hidden" name="currency_code" value="USD">
+                                <input type="hidden" name="return" value="https://humanitystruth.com/donate">
+                                <input type="hidden" name="cancel_return" value="https://humanitystruth.com/donate">
+                            </div>
                         </div>
+                        <div v-if="monthlyMethod">
+                            <div class="form-group">
+                                <input type="hidden" name="cmd" value="_xclick-subscriptions">
+                                <input type="hidden" name="business" value="admin@humanitystruth.com">
+                                <input type="hidden" name="a3" v-model="price">
+                                <input type="hidden" name="p3" value="1">
+                                <input type="hidden" name="t3" value="M">
+                                <input type="hidden" name="currency_code" value="USD">
+                                <input type="hidden" name="src" value="1">
+                                <input type="hidden" name="return" value="https://humanitystruth.com/donate">
+                                <input type="hidden" name="cancel_return" value="https://humanitystruth.com/donate">
+                            </div>
+                        </div>
+                            
                         <div class="form-group">
                             <input type="submit" class="btn btn-info" value="Proceed to PayPal">
                         </div>

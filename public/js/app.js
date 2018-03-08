@@ -1745,6 +1745,23 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 var prices = [0, 1000, 500, 250, 100, 50, 25, 10];
 var pay_types = ["once", "Monthly"];
@@ -36417,61 +36434,152 @@ var render = function() {
                   }
                 },
                 [
-                  _c("div", { staticClass: "form-group" }, [
-                    _c("input", {
-                      attrs: {
-                        type: "hidden",
-                        name: "cmd",
-                        value: "_donations"
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c("input", {
-                      attrs: {
-                        type: "hidden",
-                        name: "business",
-                        value: "admin@humanitystruth.com"
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.price,
-                          expression: "price"
-                        }
-                      ],
-                      staticClass: "pure-number",
-                      attrs: { type: "hidden", name: "amount" },
-                      domProps: { value: _vm.price },
-                      on: {
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.price = $event.target.value
-                        }
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c("input", {
-                      attrs: {
-                        type: "hidden",
-                        name: "return",
-                        value: "https://humanitystruth.com/donate"
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c("input", {
-                      attrs: {
-                        type: "hidden",
-                        name: "cancel_return",
-                        value: "https://humanitystruth.com/donate"
-                      }
-                    })
-                  ]),
+                  !_vm.monthlyMethod
+                    ? _c("div", [
+                        _c("div", { staticClass: "form-group" }, [
+                          _c("input", {
+                            attrs: {
+                              type: "hidden",
+                              name: "cmd",
+                              value: "_donations"
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("input", {
+                            attrs: {
+                              type: "hidden",
+                              name: "business",
+                              value: "admin@humanitystruth.com"
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.price,
+                                expression: "price"
+                              }
+                            ],
+                            staticClass: "pure-number",
+                            attrs: { type: "hidden", name: "amount" },
+                            domProps: { value: _vm.price },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.price = $event.target.value
+                              }
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("input", {
+                            attrs: {
+                              type: "hidden",
+                              name: "currency_code",
+                              value: "USD"
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("input", {
+                            attrs: {
+                              type: "hidden",
+                              name: "return",
+                              value: "https://humanitystruth.com/donate"
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("input", {
+                            attrs: {
+                              type: "hidden",
+                              name: "cancel_return",
+                              value: "https://humanitystruth.com/donate"
+                            }
+                          })
+                        ])
+                      ])
+                    : _vm._e(),
+                  _vm._v(" "),
+                  _vm.monthlyMethod
+                    ? _c("div", [
+                        _c("div", { staticClass: "form-group" }, [
+                          _c("input", {
+                            attrs: {
+                              type: "hidden",
+                              name: "cmd",
+                              value: "_xclick-subscriptions"
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("input", {
+                            attrs: {
+                              type: "hidden",
+                              name: "business",
+                              value: "admin@humanitystruth.com"
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.price,
+                                expression: "price"
+                              }
+                            ],
+                            attrs: { type: "hidden", name: "a3" },
+                            domProps: { value: _vm.price },
+                            on: {
+                              input: function($event) {
+                                if ($event.target.composing) {
+                                  return
+                                }
+                                _vm.price = $event.target.value
+                              }
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("input", {
+                            attrs: { type: "hidden", name: "p3", value: "1" }
+                          }),
+                          _vm._v(" "),
+                          _c("input", {
+                            attrs: { type: "hidden", name: "t3", value: "M" }
+                          }),
+                          _vm._v(" "),
+                          _c("input", {
+                            attrs: {
+                              type: "hidden",
+                              name: "currency_code",
+                              value: "USD"
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("input", {
+                            attrs: { type: "hidden", name: "src", value: "1" }
+                          }),
+                          _vm._v(" "),
+                          _c("input", {
+                            attrs: {
+                              type: "hidden",
+                              name: "return",
+                              value: "https://humanitystruth.com/donate"
+                            }
+                          }),
+                          _vm._v(" "),
+                          _c("input", {
+                            attrs: {
+                              type: "hidden",
+                              name: "cancel_return",
+                              value: "https://humanitystruth.com/donate"
+                            }
+                          })
+                        ])
+                      ])
+                    : _vm._e(),
                   _vm._v(" "),
                   _vm._m(2)
                 ]
