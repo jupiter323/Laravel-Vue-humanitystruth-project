@@ -1,0 +1,34 @@
+@media (min-width: 1400px) {
+    .align-center {
+        width: 1200px;
+        margin: auto;
+    }
+}
+
+@media (min-width: 1000px) and (max-width:1400px) {
+    .align-center {
+        width: 1000px;
+        margin: auto;
+    }
+}
+
+@media (min-width: 700px) and (max-width:1000px) {
+    .align-center {
+        width: 600px;
+        margin: auto;
+    }
+}
+
+@media (max-width:650px) and (min-width:400px) {
+    .align-center {
+        width: 400px;
+        margin: auto;
+    }
+}
+
+@media (max-width:400px) {
+    .align-center {
+        width: 200px;
+        margin: auto;
+    }
+}
