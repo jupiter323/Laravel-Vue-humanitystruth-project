@@ -56,6 +56,7 @@ class PaypalController extends Controller {
     }
 
     public function getDone(Request $request) {
+        $checkD = 0;
         $id = $request->get('paymentId');
         $token = $request->get('token');
         $payer_id = $request->get('PayerID');
